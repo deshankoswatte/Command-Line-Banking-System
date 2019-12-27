@@ -15,7 +15,8 @@ def new_account():
 
     counter_1 = 1
     counter_2 = 5
-    i = len(customer_names)
+    accounts_saved = len(customer_names)
+    i = accounts_saved
 
     # The line below will take the no:of customers from the user.
     no_of_accounts = eval(input("Number of Accounts to be created : "))
@@ -23,7 +24,7 @@ def new_account():
     # The if condition will restrict the number of new account to 5.
     if i > 10:
         print("\n")
-        print("Customer registration exceed reached the no:of spaces left are: " + i)
+        print("Customer registration exceed reached the no:of spaces left are: " + str(accounts_saved - 5))
     else:
         # The while loop will run according to the no:of customers.
         while counter_1 <= no_of_accounts:
