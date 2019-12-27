@@ -15,18 +15,18 @@ def new_account():
 
     counter_1 = 1
     counter_2 = 5
-    i = 0
+    i = len(customer_names)
 
     # The line below will take the no:of customers from the user.
-    no_of_customers = eval(input("Number of Customers : "))
-    i = i + no_of_customers
+    no_of_accounts = eval(input("Number of Accounts to be created : "))
+    i = i + no_of_accounts
     # The if condition will restrict the number of new account to 5.
-    if i > 5:
+    if i > 10:
         print("\n")
-        print("Customer registration exceed reached or Customer registration too low")
+        print("Customer registration exceed reached the no:of spaces left are: " + i)
     else:
         # The while loop will run according to the no:of customers.
-        while counter_1 <= i:
+        while counter_1 <= no_of_accounts:
             # These few lines will take information from customer and then append them to the list.
             name = input("Input Fullname : ")
             customer_names.append(name)
